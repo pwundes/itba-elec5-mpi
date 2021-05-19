@@ -6,7 +6,7 @@
 #include <stdio.h>
 #include "mpi.h"
 #include <sys/time.h>
-#define N 32                      /* number of rows and columns in matrix */
+#define N 4                      /* number of rows and columns in matrix */
 
 MPI_Status status;
 
@@ -63,14 +63,14 @@ main(int argc, char **argv)
     }
 
     gettimeofday(&stop, 0);
-/*
+
     printf("Here is the result matrix:\n");
     for (i=0; i<N; i++) {
       for (j=0; j<N; j++)
         printf("%6.2f   ", c[i][j]);
       printf ("\n");
     }
-*/
+
     fprintf(stdout,"Time = %.6f\n\n",
          (stop.tv_sec+stop.tv_usec*1e-6)-(start.tv_sec+start.tv_usec*1e-6));
 
