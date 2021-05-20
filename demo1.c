@@ -26,9 +26,8 @@ int main(int argc, char *argv[])
         printf("Esperando los mensajes...\n");
     } else {
     	printf("My rank %d of %d, host: %s\n", rank, size, hostname );
-	printf("Here are my values for A\n");
-	for (i=0; i<10; i++)
-        	printf("%f ", A[i]);
+	printf("A=");
+        printf("%i ", A);
 	printf("\n");
     }
 
